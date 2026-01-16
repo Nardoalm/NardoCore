@@ -1,0 +1,5 @@
+name: NardoCore
+version: 1.0.0
+main: fusionmc.nardodev.utils.Main
+author: NardoDev
+depend: [ApexServices]
