@@ -1,0 +1,54 @@
+name: NardoCore
+version: 1.1
+main: fusionmc.nardodev.utils.Main
+api-version: 1.8
+author: NardoDev
+description: Plugin basico NardoCore
+depend: [ApexServices]
+softdepend: [ProtocolLib, PlaceholderAPI, Vault]
+
+permissions:
+  nardocore.*:
+    description: Todas as permissões do NardoCore
+    default: op
+    children:
+      nardocore.use: true
+      nardocore.admin: true
+      nardocore.clearchat: true
+      nardocore.gamemode: true
+      nardocore.teleport: true
+      nardocore.vanish: true
+      nardocore.ping: true
+      nardocore.discord: true
+
+  nardocore.use:
+    description: Permissão básica para usar comandos
+    default: true
+
+  nardocore.admin:
+    description: Permissão de administrador
+    default: op
+
+  nardocore.clearchat:
+    description: Permissão para limpar o chat
+    default: op
+
+  nardocore.gamemode:
+    description: Permissão para mudar gamemode
+    default: op
+
+  nardocore.teleport:
+    description: Permissão para teleportar
+    default: op
+
+  nardocore.vanish:
+    description: Permissão para usar vanish
+    default: op
+
+  nardocore.ping:
+    description: Permissão para ver ping
+    default: true
+
+  nardocore.discord:
+    description: Permissão para ver Discord
+    default: true
