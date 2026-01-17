@@ -4,6 +4,8 @@ import org.bukkit.*;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.entity.EntityDamageEvent;
+import org.bukkit.event.entity.FoodLevelChangeEvent;
 import org.bukkit.event.player.AsyncPlayerPreLoginEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
 import fusionmc.nardodev.utils.upgrade.Upgrade;
@@ -29,6 +31,16 @@ public class PlayerJoinListener implements Listener {
    @EventHandler
    public void onJoin(PlayerJoinEvent event) {
       event.setJoinMessage(null);
+   }
+
+   @EventHandler
+   public void removeDamage(EntityDamageEvent event) {
+      event.setDamage(0.0);
+   }
+
+   @EventHandler
+   public void removeFoodLevelChange(FoodLevelChangeEvent event) {
+      event.setCancelled(true);
    }
 
    @EventHandler

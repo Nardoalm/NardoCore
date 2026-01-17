@@ -16,9 +16,9 @@ public abstract class Commands extends Command {
 
       try {
          SimpleCommandMap simpleCommandMap = (SimpleCommandMap)Bukkit.getServer().getClass().getDeclaredMethod("getCommandMap").invoke(Bukkit.getServer());
-         simpleCommandMap.register(this.getName(), "hyzenutils", this);
+         simpleCommandMap.register(this.getName(), "nardocore", this);
       } catch (ReflectiveOperationException var4) {
-        Bukkit.getServer().getConsoleSender().sendMessage(ChatColor.RED + "Nao foi possivel iniciar os comandos.");
+        Bukkit.getServer().getConsoleSender().sendMessage(ChatColor.RED + "Não foi possível iniciar os comandos.");
       }
 
    }
@@ -32,6 +32,7 @@ public abstract class Commands extends Command {
       new CommandList();
       new TeleportCommand();
       new CbanCommand();
+      new FlyCommand();
       new UnbanCommand();
    }
 

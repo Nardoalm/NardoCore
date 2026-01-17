@@ -1,7 +1,9 @@
 fusionmc\nardodev\utils\bungee\commands\uTils\DivulgarCommand.class
 fusionmc\nardodev\utils\bungee\commands\uTils\OnlineCommand.class
 fusionmc\nardodev\utils\bungee\commands\Commands.class
+fusionmc\nardodev\utils\cmd\utils\FlyCommand.class
 fusionmc\nardodev\utils\cmd\utils\GamemodeCommand.class
+fusionmc\nardodev\utils\listeners\player\ProtectionListener.class
 fusionmc\nardodev\utils\bungee\Settings.class
 fusionmc\nardodev\utils\cmd\utils\CommandList.class
 fusionmc\nardodev\utils\scoreboard\VirtualTeam.class
