@@ -1,6 +1,7 @@
 package me.nardodev.utils.listeners.player;
 
 import me.nardodev.utils.Main;
+import me.nardodev.utils.managers.types.TabListManager;
 import org.bukkit.*;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -22,6 +23,10 @@ public class PlayerJoinListener implements Listener {
    @EventHandler
    public void onPlayerJoin(PlayerJoinEvent event) {
       Player player = event.getPlayer();
+      String header = "\n §b§lFUSIONMC \n §fBem-vindo ao nosso servidor! \n";
+      String footer = "\n §eLoja: §fstore.fusionmc.com.br \n §bDiscord: §fdc.fusionmc.com.br \n";
+
+      TabListManager.setTabList(player, header, footer);
 
       event.setJoinMessage(null);
 

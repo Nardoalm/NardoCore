@@ -3,5 +3,5 @@ version: 1.6
 main: me.nardodev.utils.Main
 api-version: 1.8
 author: NardoDev
-description: Plugin de utils básico,
+description: Plugin de utils básico.
 depend: [ProtocolLib, PlaceholderAPI]
