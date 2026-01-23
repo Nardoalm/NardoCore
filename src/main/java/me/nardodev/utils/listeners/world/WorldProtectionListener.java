@@ -14,6 +14,10 @@ public class WorldProtectionListener implements Listener {
     public WorldProtectionListener(){
     }
 
+    public static boolean getPvp(){
+        return pvp;
+    }
+
     public static void setPvp(boolean status) {
         pvp = status;
     }

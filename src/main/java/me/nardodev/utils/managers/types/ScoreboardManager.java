@@ -75,7 +75,7 @@ public class ScoreboardManager {
         createTeamLine(sb, obj, "line2", "§6", 2);
         createTeamLine(sb, obj, "line1", "§7", 1);
 
-        obj.getScore("§ewww.fusionmc.com.br").setScore(0);
+        obj.getScore("§afusionmc.com.br").setScore(0);
     }
 
     private static void createTeamLine(Scoreboard sb, Objective obj, String teamName, String entry, int score) {

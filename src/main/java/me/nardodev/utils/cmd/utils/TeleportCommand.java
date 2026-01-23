@@ -26,7 +26,7 @@ public class TeleportCommand extends Commands {
          return;
       }
 
-      if (args[1] == sender.getName()) {
+      if (Objects.equals(args[1], sender.getName())) {
          sender.sendMessage("§c§lERRO ➔ §cVocê não pode teleportar para si mesmo!");
          Player senderPlayer = (Player) sender;
          senderPlayer.playSound(senderPlayer.getLocation(), Sound.VILLAGER_NO, 1.0f, 1.0f);
@@ -42,6 +42,12 @@ public class TeleportCommand extends Commands {
    }
 
    public boolean execute(CommandSender sender, String currentAlias, String[] args) {
+      if (!sender.hasPermission("nardocore.staff.teleportar")) {
+         sender.sendMessage("§c§lERRO ➔ §cVocê não possui permissão para executar este comando.");
+         Player senderPlayer = (Player) sender;
+         senderPlayer.playSound(senderPlayer.getLocation(), Sound.VILLAGER_NO, 1.0f, 1.0f);
+         return true;
+      }
       if (!this.testPermission(sender)) {
          return true;
       } else if (args.length >= 1 && args.length <= 4) {

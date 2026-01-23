@@ -35,6 +35,7 @@ public abstract class Commands extends Command {
       new SetSpawnCommand();
       new UnbanCommand();
       new BuildCommand();
+      new PvpCommand();
    }
 
    public abstract void perform(CommandSender sender, String label, String[] args);
