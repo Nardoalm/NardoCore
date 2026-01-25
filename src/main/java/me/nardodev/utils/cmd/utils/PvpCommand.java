@@ -31,7 +31,7 @@ public class PvpCommand extends Commands {
             }
         } else {
             WorldProtectionListener.setPvp(false);
-            sender.sendMessage("§a§lSUCESSO ➔ §aPVP Global foi §cDESATIVADO.");
+            sender.sendMessage("§a§lSUCESSO ➔ §aModo de combate foi DESATIVADO.");
             if (sender instanceof Player) {
                 ((Player) sender).playSound(((Player) sender).getLocation(), Sound.CLICK, 1.0f, 1.0f);
             }

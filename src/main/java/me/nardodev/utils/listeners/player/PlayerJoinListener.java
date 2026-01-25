@@ -2,15 +2,15 @@ package me.nardodev.utils.listeners.player;
 
 import me.nardodev.utils.Main;
 import me.nardodev.utils.managers.types.TabListManager;
+import me.nardodev.utils.mikoImports.utils.TitleUtils;
+import org.bukkit.event.player.PlayerAchievementAwardedEvent;
+import me.nardodev.utils.mikoImports.welcomeMessages.WelcomeMessage;
 import org.bukkit.*;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.AsyncPlayerPreLoginEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
-import org.bukkit.BanList;
-import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
 import org.bukkit.event.player.PlayerQuitEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -19,16 +19,13 @@ import java.util.Date;
 
 public class PlayerJoinListener implements Listener {
 
-
    @EventHandler
    public void onPlayerJoin(PlayerJoinEvent event) {
       Player player = event.getPlayer();
-      String header = "\n §b§lFUSIONMC \n §fBem-vindo ao nosso servidor! \n";
-      String footer = "\n §eLoja: §fstore.fusionmc.com.br \n §bDiscord: §fdc.fusionmc.com.br \n";
+      String header = "\n §a§lFUSION \n";
+      String footer = "\n §eWebsite: §bfusionmc.com.br \n §eDiscord: §bdc.fusionmc.com.br \n";
 
       TabListManager.setTabList(player, header, footer);
-
-      event.setJoinMessage(null);
 
       player.setGameMode(GameMode.SURVIVAL);
       Main plugin = JavaPlugin.getPlugin(Main.class);
@@ -66,9 +63,21 @@ public class PlayerJoinListener implements Listener {
             player.setAllowFlight(true);
             player.setFlying(true);
          }
-
-
       }
+
+      TitleUtils.sendTitle(event.getPlayer(), "§a§lFUSION", "§eBem-vindo!", 20, 20, 20);
+
+      event.setJoinMessage(null);
+      WelcomeMessage.sendWelcomeMessage(event.getPlayer());
+
+      if(event.getPlayer().getTotalExperience() != 2026) {
+         event.getPlayer().setTotalExperience(2026);
+      }
+   }
+
+   @EventHandler
+   public void onAdvancement(PlayerAchievementAwardedEvent event) {
+      event.setCancelled(true);
    }
 
    @EventHandler

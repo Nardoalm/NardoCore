@@ -34,7 +34,7 @@ public class GamemodeCommand extends Commands {
                if (GameModeManager.isValidMode(gamemode)) {
                   GameModeManager.setGamemode(player, gamemode);
                   player.sendMessage("§A§lSUCESSO ➔ §aSeu modo de jogo foi alterado para " + GameModeManager.getFrom(gamemode));
-                  player.playSound(player.getLocation(), Sound.VILLAGER_YES, 1.0f, 1.0f);
+                  player.playSound(player.getLocation(), Sound.LEVEL_UP, 1.0f, 1.0f);
 
                } else {
                   player.sendMessage("§c§lERRO ➔ §cUtilize /gamemode <modo>");

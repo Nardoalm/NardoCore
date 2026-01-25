@@ -1,5 +1,7 @@
 package me.nardodev.utils.listeners;
 
+import me.nardodev.utils.listeners.entity.EntityListener;
+import me.nardodev.utils.listeners.player.ChatListener;
 import me.nardodev.utils.listeners.player.ProtectionListener;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.PluginManager;
@@ -12,9 +14,10 @@ public class Listeners {
          PluginManager pm = Bukkit.getPluginManager();
          pm.registerEvents(new ProtectionListener(), Main.getInstance());
          pm.registerEvents(new PlayerJoinListener(), Main.getInstance());
-
-      } catch (Exception var1) {
-         var1.printStackTrace();
+         pm.registerEvents(new EntityListener(), Main.getInstance());
+         pm.registerEvents(new ChatListener(), Main.getInstance());
+      } catch (Exception e) {
+         e.printStackTrace();
       }
    }
 }
