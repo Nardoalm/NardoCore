@@ -1,6 +1,6 @@
 name: NardoLobby
-version: 1.8
-main: me.nardodev.utils.Main
+version: 1.8.10
+main: me.nardodev.lobby.Main
 api-version: 1.8
 author: NardoDev
 description: Plugin de lobby

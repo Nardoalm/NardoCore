@@ -7,7 +7,7 @@
 
     <groupId>me.nardodev</groupId>
     <artifactId>NardoLobby</artifactId>
-    <version>1.8</version>
+    <version>1.8.10</version>
     <packaging>jar</packaging>
 
     <name>NardoLobby</name>
